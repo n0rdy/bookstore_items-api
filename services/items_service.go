@@ -2,6 +2,7 @@ package services
 
 import (
 	"github.com/n0rdy/bookstore_items-api/domain/items"
+	"github.com/n0rdy/bookstore_items-api/domain/queries"
 	"github.com/n0rdy/bookstore_utils-go/rest_errors"
 )
 
@@ -12,7 +13,7 @@ var (
 type itemsServiceInterface interface {
 	Create(items.Item) (*items.Item, rest_errors.RestErr)
 	Get(string) (*items.Item, rest_errors.RestErr)
-	//Search(queries.EsQuery) ([]items.Item, rest_errors.RestErr)
+	Search(queries.EsQuery) ([]items.Item, rest_errors.RestErr)
 }
 
 type itemsService struct{}
@@ -33,7 +34,7 @@ func (s *itemsService) Get(id string) (*items.Item, rest_errors.RestErr) {
 	return &item, nil
 }
 
-//func (s *itemsService) Search(query queries.EsQuery) ([]items.Item, rest_errors.RestErr) {
-//	dao := items.Item{}
-//	return dao.Search(query)
-//}
+func (s *itemsService) Search(query queries.EsQuery) ([]items.Item, rest_errors.RestErr) {
+	dao := items.Item{}
+	return dao.Search(query)
+}
