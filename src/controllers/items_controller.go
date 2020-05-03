@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
-	"github.com/n0rdy/bookstore_items-api/domain/items"
-	"github.com/n0rdy/bookstore_items-api/domain/queries"
-	"github.com/n0rdy/bookstore_items-api/services"
-	"github.com/n0rdy/bookstore_items-api/utils/http_utils"
+	"github.com/n0rdy/bookstore_items-api/src/domain/items"
+	"github.com/n0rdy/bookstore_items-api/src/domain/queries"
+	"github.com/n0rdy/bookstore_items-api/src/services"
+	"github.com/n0rdy/bookstore_items-api/src/utils/http_utils"
 	"github.com/n0rdy/bookstore_oauth-go/oauth"
 	"github.com/n0rdy/bookstore_utils-go/rest_errors"
 	"io/ioutil"
@@ -22,7 +22,7 @@ var (
 type itemsControllerInterface interface {
 	Create(w http.ResponseWriter, r *http.Request)
 	Get(w http.ResponseWriter, r *http.Request)
-	//Search(w http.ResponseWriter, r *http.Request)
+	Search(w http.ResponseWriter, r *http.Request)
 }
 
 type itemsController struct {

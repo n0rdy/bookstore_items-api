@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/n0rdy/bookstore_items-api/client/elasticsearch"
-	"github.com/n0rdy/bookstore_items-api/domain/queries"
+	"github.com/n0rdy/bookstore_items-api/src/client/elasticsearch"
+	"github.com/n0rdy/bookstore_items-api/src/domain/queries"
 	"github.com/n0rdy/bookstore_utils-go/rest_errors"
 	"strings"
 )

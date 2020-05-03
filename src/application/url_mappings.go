@@ -1,7 +1,7 @@
 package application
 
 import (
-	"github.com/n0rdy/bookstore_items-api/controllers"
+	"github.com/n0rdy/bookstore_items-api/src/controllers"
 	"net/http"
 )
 
